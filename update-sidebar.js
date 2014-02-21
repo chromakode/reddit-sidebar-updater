@@ -1,4 +1,5 @@
 // spiffy sidebar updater
+// https://github.com/chromakode/reddit-sidebar-updater
 //
 // Copyright (c) 2014 Max Goodman.
 // All rights reserved.
