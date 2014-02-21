@@ -4,6 +4,8 @@ Hi, I'm a [Google Apps Script](http://www.google.com/script/start/) for
 updating your subreddit's sidebar periodically. Currently, I only know how to
 update a schedule from a Google Calendar, but you can teach me new tricks.
 
+![<3](http://24.media.tumblr.com/tumblr_m3c52pELxo1rrdvx9o1_500.gif)
+
 
 ## details
 
