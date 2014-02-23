@@ -68,8 +68,12 @@ function updateSchedule() {
   })
   templateData = JSON.parse(templateData)
   var template = templateData['data']['content_md']
-  template = template.replace(/&gt;/g, '>')
-  
+  template = template
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+
   // read the calendar for events and build our schedule table
   var calendar = CalendarApp.getCalendarById(CALENDAR)
   var now = new Date()
