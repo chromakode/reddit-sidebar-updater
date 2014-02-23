@@ -3,7 +3,7 @@
 //
 // Copyright (c) 2014 Max Goodman.
 // All rights reserved.
-//  
+//
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions
 // are met:
@@ -61,7 +61,7 @@ function updateSchedule() {
   })
   authData = JSON.parse(authData)
   var authToken = authData['access_token']
-  
+
   // load the sidebar template from reddit's wiki
   var templateData = UrlFetchApp.fetch('https://oauth.reddit.com/r/' + SUBREDDIT + '/wiki/sidebar_template.json', {
     headers: {'Authorization': 'bearer ' + authToken}
@@ -87,7 +87,7 @@ function updateSchedule() {
   for (var i = 0; i < events.length; i++) {
     var event = events[i]
     var eventDate = event.getStartTime()
-    
+
     // these four fields form each table line
     var tableLine = [
       Utilities.formatDate(eventDate, 'EST', 'd MMM'),
@@ -95,7 +95,7 @@ function updateSchedule() {
       event.getTitle(),
       event.getDescription()
     ].join('|') + '\n'
-    
+
     if (sidebarLength + tableLine.length > LENGTH_LIMIT) {
       break
     } else {
@@ -103,7 +103,7 @@ function updateSchedule() {
       sidebarLength += tableLine.length
     }
   }
-    
+
   // update the sidebar! :)
   var sidebar = template.replace('{{SCHEDULE}}', sidebarTable)
   UrlFetchApp.fetch('https://oauth.reddit.com/r/' + SUBREDDIT + '/api/wiki/edit', {
