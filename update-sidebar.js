@@ -36,6 +36,7 @@
 var CALENDAR = ''  // you must have subscribed to this calendar in Google Calendar
 var SUBREDDIT = ''
 var DAY_RANGE = 10  // how many days ahead to list events for
+var SCHEDULE_TIME_ZONE = 'America/New_York'
 
 var CLIENT_ID = ''  // your OAuth2 client ID
 var CLIENT_SECRET = ''  // your OAuth2 client secret
@@ -90,8 +91,8 @@ function updateSchedule() {
 
     // these four fields form each table line
     var tableLine = [
-      Utilities.formatDate(eventDate, 'EST', 'd MMM'),
-      Utilities.formatDate(eventDate, 'EST', eventDate.getMinutes() != 0 ? 'h:mma' : 'ha').toLowerCase(),
+      Utilities.formatDate(eventDate, SCHEDULE_TIME_ZONE, 'd MMM'),
+      Utilities.formatDate(eventDate, SCHEDULE_TIME_ZONE, eventDate.getMinutes() != 0 ? 'h:mma' : 'ha').toLowerCase(),
       event.getTitle(),
       event.getDescription()
     ].join('|') + '\n'
@@ -110,7 +111,7 @@ function updateSchedule() {
     payload: {
       content: sidebar,
       page: 'config/sidebar',
-      reason: 'Automated Google Apps Script update @ ' + Utilities.formatDate(now, 'PST', 'd MMM h:mma z')
+      reason: 'Automated Google Apps Script update @ ' + Utilities.formatDate(now, 'America/Los_Angeles', 'd MMM h:mma z')
     },
     method: 'post',
     headers: {'Authorization': 'bearer ' + authToken}
