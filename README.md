@@ -31,7 +31,7 @@ To use it, you'll need:
 ## installation instructions
 
 1. Create an [Apps Script](http://www.google.com/script/start/) with the
-   contents of reddit-sidebar.gs.
+   contents of update-sidebar.js.
 2. Create a reddit account for the script and mod with with "wiki" permissions.
    Enter the username/password into your script.
 3. Create an [OAuth2 app](https://ssl.reddit.com/prefs/apps/) for the script to
