@@ -32,8 +32,8 @@ To use it, you'll need:
 
 1. Create an [Apps Script](http://www.google.com/script/start/) with the
    contents of update-sidebar.js.
-2. Create a reddit account for the script and mod with with "wiki" permissions.
-   Enter the username/password into your script.
+2. Create a reddit account for the script and mod with with both "config" and 
+   "wiki" permissions. Enter the username/password into your script.
 3. Create an [OAuth2 app](https://ssl.reddit.com/prefs/apps/) for the script to
    authenticate with. Make sure to choose the "script" app type, which is
    necessary for the password OAuth2 flow this script uses. Enter the OAuth2
