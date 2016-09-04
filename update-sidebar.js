@@ -33,15 +33,19 @@
 // base content for the sidebar, with {{SCHEDULE}} replaced with a tabular
 // schedule from CALENDAR (configured below).
 
-var CALENDAR = ''  // you must have subscribed to this calendar in Google Calendar
+// find the id of the calendar you wish to use in the Google Calendar preferences.
+// it looks like this: abcdefhijklmnop@calendar.google.com
+// (you must be subscribed to this calendar in Google Calendar)
+var CALENDAR = ''
 var SUBREDDIT = ''
 var DAY_RANGE = 10  // how many days ahead to list events for
 var SCHEDULE_TIME_ZONE = 'America/New_York'
 
+// register a "script" type reddit OAuth2 app at reddit.com/prefs/apps for these:
 var CLIENT_ID = ''  // your OAuth2 client ID
 var CLIENT_SECRET = ''  // your OAuth2 client secret
 
-// please create a user solely for this script and mod them with wiki permissions only.
+// please create a user solely for this script and mod them with wiki permissions.
 var USERNAME = ''
 var PASSWORD = ''
 
