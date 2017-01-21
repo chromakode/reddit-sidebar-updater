@@ -50,7 +50,7 @@ var USERNAME = ''
 var PASSWORD = ''
 
 // the maximum sidebar length, set by reddit
-var LENGTH_LIMIT = 5120
+var LENGTH_LIMIT = 10240
 
 function updateSchedule() {
   // get an OAuth2 token
