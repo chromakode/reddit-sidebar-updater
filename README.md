@@ -36,7 +36,7 @@ To use it, you'll need:
    "wiki" permissions. Enter the username/password into your script.
 3. Create an [OAuth2 app](https://ssl.reddit.com/prefs/apps/) for the script to
    authenticate with. Make sure to choose the "script" app type, which is
-   necessary for the password OAuth2 flow this script uses. Enter the OAuth2
+   necessary for the password OAuth2 flow this script uses. Set the redirect uri to `http://127.0.0.1`. Enter the OAuth2
    app client id and client secret into the script.
 4. Copy your existing sidebar into a wiki page called "sidebar_template",
    adding `{{SCHEDULE}}` where you wish for the schedule to be.
